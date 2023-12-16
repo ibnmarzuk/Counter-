@@ -1,0 +1,21 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const decrementButton = document.getElementById('decrement');
+  const incrementButton = document.getElementById('increment');
+  const countElement = document.getElementById('count');
+
+  let count = 0;
+
+  decrementButton.addEventListener('click', function () {
+    count--;
+    updateCounter();
+  });
+
+  incrementButton.addEventListener('click', function () {
+    count++;
+    updateCounter();
+  });
+
+  function updateCounter() {
+    countElement.textContent = count;
+  }
+});
